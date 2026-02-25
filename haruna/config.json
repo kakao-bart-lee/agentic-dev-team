@@ -42,10 +42,12 @@
       "prompt": "prompts/architect.md"
     },
     "be": {
-      "model": "claude-sonnet-4-5",
+      "model": "claude-sonnet-4-6",
+      "alt_model": "gpt-4.1-mini",
       "mode": "run",
       "via": "sessions_spawn",
-      "prompt": "prompts/be-task.md"
+      "prompt": "prompts/be-task.md",
+      "note": "codex(apikey mode) also available for BE tasks"
     },
     "fe": {
       "model": "claude-sonnet-4-5",
