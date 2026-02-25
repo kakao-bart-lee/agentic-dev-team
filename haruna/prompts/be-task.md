@@ -12,11 +12,11 @@
 - **범위를 임의로 넓히지 않음**. 불확실하면 PO에게 질문.
 
 ## Tech Stack
-- Java 21, Spring Boot 3.x, JPA/Hibernate
-- PostgreSQL (pgvector 확장 포함)
-- Flyway migrations (최신 V{N} 확인 후 V{N+1})
-- Gradle build
-- Docker Compose for local dev
+- Java 25, Spring Boot 4.0.3, JPA/Hibernate
+- PostgreSQL 16 + pgvector 확장 (docker: pgvector/pgvector:pg16)
+- Flyway migrations (현재 V80+, `ls src/main/resources/db/migration/ | tail -3` 으로 최신 확인)
+- Gradle build (Kotlin DSL: build.gradle.kts)
+- Docker Compose for local dev (docker-compose.dev.yml)
 
 ## 작업 순서 (Plan-First)
 
