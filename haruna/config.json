@@ -66,17 +66,18 @@
       "prompt": "prompts/architect.md"
     },
     "be": {
-      "model": "openai/gpt-5.2",
-      "alt_model": "gpt-4.1-mini",
+      "model": "openai/gpt-5.3-codex",
+      "alt_model": "openai/gpt-5.2",
       "mode": "run",
       "via": "sessions_spawn",
       "prompt": "prompts/be-task.md",
-      "note": "codex(apikey mode) also available for BE tasks"
+      "note": "gpt-5.3-codex via openclaw agents add openai-codex (OAuth, 2026-02-26 확인)"
     },
     "fe": {
-      "model": "google/gemini-3.1-pro-preview",
+      "model": "openai/gpt-5.3-codex",
+      "alt_model": "google/gemini-3.1-pro-preview",
       "mode": "run",
-      "via": "tmux",
+      "via": "sessions_spawn",
       "prompt": "prompts/fe-task.md"
     },
     "reviewer": {
