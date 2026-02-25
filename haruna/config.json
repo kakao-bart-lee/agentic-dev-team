@@ -1,0 +1,82 @@
+{
+  "team": "haruna",
+  "project": "arkana",
+  "linear": {
+    "teamId": "1d7782ba-a2e0-4554-8929-c56bd1bef54f"
+  },
+  "repos": {
+    "spring": "/Users/joy/workspace/spring-arkana-server",
+    "backoffice": "/Users/joy/workspace/backoffice-arkana",
+    "flow-engine": "/Users/joy/workspace/arkana-flow-engine"
+  },
+  "discord": {
+    "channelId": "1476235176282423460",
+    "webhook": "https://discord.com/api/webhooks/1476235356226715680/NgS3-NWDgfv6lOrK93kbKr5TuARg5mlWxj-NDHe-RMDhBZxy-wYhYzx4nPgHiSpJxtqC",
+    "personas": {
+      "po": { "username": "Haruna PO", "emoji": "👔" },
+      "be": { "username": "BE Developer", "emoji": "⚙️" },
+      "fe": { "username": "FE Developer", "emoji": "🎨" },
+      "sentinel": { "username": "Sentinel", "emoji": "🛰️" },
+      "architect": { "username": "Architect", "emoji": "📐" },
+      "reviewer": { "username": "Reviewer", "emoji": "🔍" },
+      "researcher": { "username": "Researcher", "emoji": "🔬" },
+      "retrospective": { "username": "Retrospective", "emoji": "📊" }
+    }
+  },
+  "agents": {
+    "sentinel": {
+      "model": "gemini-2.5-flash",
+      "cronInterval": "*/15 * * * *",
+      "mode": "run",
+      "prompt": "prompts/sentinel.md"
+    },
+    "po": {
+      "model": "claude-sonnet-4-5",
+      "mode": "session",
+      "label": "haruna-po",
+      "prompt": "prompts/po-system.md"
+    },
+    "architect": {
+      "model": "gemini-2.5-pro",
+      "mode": "run",
+      "prompt": "prompts/architect.md"
+    },
+    "be": {
+      "model": "claude-sonnet-4-5",
+      "mode": "run",
+      "via": "sessions_spawn",
+      "prompt": "prompts/be-task.md"
+    },
+    "fe": {
+      "model": "claude-sonnet-4-5",
+      "mode": "run",
+      "via": "tmux",
+      "prompt": "prompts/fe-task.md"
+    },
+    "reviewer": {
+      "model": "claude-sonnet-4-5",
+      "mode": "run",
+      "prompt": "prompts/reviewer.md"
+    },
+    "researcher": {
+      "model": "gemini-2.5-pro",
+      "mode": "run",
+      "prompt": "prompts/researcher.md"
+    },
+    "retrospective": {
+      "model": "gemini-2.5-flash",
+      "mode": "run",
+      "prompt": "prompts/retrospective.md"
+    }
+  },
+  "reviewPolicy": {
+    "codex": { "required": true, "mustPass": true },
+    "gemini": { "required": true, "mustPass": true },
+    "claude": { "required": true, "mustPass": false, "criticalOnly": true }
+  },
+  "worktreesRoot": "/Users/joy/workspace/worktrees",
+  "reporting": {
+    "sessionTarget": "erika-main",
+    "discordAndSession": true
+  }
+}

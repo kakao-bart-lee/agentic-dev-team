@@ -1,0 +1,4 @@
+{"timestamp":"2026-02-26T00:54:00+09:00","issue":"HARUNA-287","type":"tool_failure","agent":"codex","detail":"codex CLI는 ChatGPT 계정에서 o4-mini, gpt-4.1 등 모델 사용 불가. API 키 기반 계정 필요.","action":"config에서 BE 모델을 claude-sonnet-4-5로 변경"}
+{"timestamp":"2026-02-26T00:54:00+09:00","issue":"HARUNA-287","type":"tool_failure","agent":"claude","detail":"claude -p (print 모드)는 도구 사용 불가. interactive 모드 필수.","action":"항상 interactive 모드 사용"}
+{"timestamp":"2026-02-26T00:54:00+09:00","issue":"HARUNA-287","type":"tool_failure","agent":"claude","detail":"tmux + Claude Code TUI: alternate screen buffer 사용으로 tmux capture-pane이 내용을 제대로 캡처 못함. 모니터링 불가.","action":"sessions_spawn 방식으로 전환"}
+{"timestamp":"2026-02-26T00:54:00+09:00","issue":"HARUNA-287","type":"process","detail":"sessions_spawn(mode=run)이 tmux 기반보다 안정적. 자동 완료 보고, 모니터링 불필요.","action":"기본 에이전트 실행 방식을 sessions_spawn으로 변경"}
