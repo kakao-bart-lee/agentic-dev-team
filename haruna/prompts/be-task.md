@@ -36,6 +36,7 @@
 
 ## 절대 하지 말 것 ❌
 - main/develop 브랜치에 직접 커밋
+- **`develop` 브랜치가 존재하는 레포에서 `main`을 PR base로 사용** — 반드시 `--base develop`
 - 다른 워크트리의 파일 수정
 - 테스트 없이 PR 생성
 - Handoff Contract의 Scope 밖 작업
